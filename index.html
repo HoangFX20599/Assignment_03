@@ -125,7 +125,13 @@
               <form>
                 <div class="mb-3">
                   
-                  <input type="email" class="form-control email-check" id="infoInputEmail" placeholder="Enter email">
+                  <input type="email" class="form-control email-check" id="infoInputEmail" list="email-suggestions" placeholder="Enter email">
+
+                  <datalist id="email-suggestions">
+                    <option value="example1@gmail.com">
+                    <option value="example2@gmail.com">
+                    <option value="example3@gmail.com">
+                  </datalist>
                   <div id="emailHelp" class="form-text">Hãy nhập email để xác thực</div>
                   <p class="warning-msg hidden"><i class="fa-solid fa-circle-exclamation"></i> Hãy nhập email để xác thực</p>
                 </div>
