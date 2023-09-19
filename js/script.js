@@ -34,7 +34,6 @@ document
     }
   });
 
-
 //   Target 2: Show and hide for the section main information
 
 //Ý tưởng
@@ -99,3 +98,34 @@ for (let i = 0; i < mainsCard.length; i++) {
 // 2. bug: tạo biến trạng trái let show = true; để  khi mouseenter sẽ chuyển sang false nhằm ẩn view more đi nhưng mà khi di chột ra ngoài quay lại view more vẫn hiện => fix: phải khỏi tạo biến trạng thái dạng mảng cho từng main-item, có thể dùng sự kiện main-body đc hiện để kiểm soát sự kiện mouseenter, và đặt lại giá trị cho nó trong sự kiện click view more or view less
 // 3. bug: dùng vòng lặp for để load các giá trị của object fix: ngáo quá đi
 // 4.
+
+//   Target 3: Show project by js
+
+/* 
+// @@@@@@ ORIGINAL CODE
+const projectItem = document.querySelectorAll(".project-item");
+
+for (let i = 0; i < projectItem.length; i++) {
+  console.log("project");
+  projectItem[i].addEventListener("click", function (event) {
+    const selectedProject = `${i}`;
+    localStorage.setItem("selectedProject", selectedProject);
+    window.location.href = "./project-charter.html";
+    console.log(selectedProject);
+    event.preventDefault();
+  });
+}
+ */
+
+// @@@@@@  REFACTORED CODE
+const projectItem = document.querySelectorAll(".project-item");
+
+for (let i = 0; i < projectItem.length; i++) {
+  projectItem[i].addEventListener("click", function (event) {
+    localStorage.setItem("selectedProject", i);
+    window.location.href = "./project-charter.html";
+    event.preventDefault();
+  });
+}
+
+// The end

@@ -7,7 +7,8 @@
   --border-secondary: #b3e1e6 !important;
   --bg-color: #eff8ff !important;
   --secondary: #9d88ff !important;
-  --test: #2c1f67 !important;
+  --color-2: #008000 !important;
+  --color-3: #ffa500 !important;
 }
 
 * {
@@ -29,8 +30,36 @@ body {
   font-size: 1.6rem;
 }
 
-.project-charter {
+.hidden {
+  display: none;
+}
+
+/* .project-charter {
   background-color: var(--primary);
+} */
+
+.project-1 {
+  background-color: var(--primary);
+}
+
+.project-1 .heading {
+  color: var(--primary);
+}
+
+.project-2 {
+  background-color: var(--color-2);
+}
+
+.project-2 .heading {
+  color: var(--color-2);
+}
+
+.project-3 {
+  background-color: var(--color-3);
+}
+
+.project-3 .heading {
+  color: var(--color-3);
 }
 
 .main-container {
@@ -48,7 +77,7 @@ body {
   font-weight: 700;
   padding: 2rem 1rem 1rem;
   border-bottom: 2px solid var(--border-first);
-  color: var(--primary);
+  /* color: var(--primary); */
 }
 
 .body {
